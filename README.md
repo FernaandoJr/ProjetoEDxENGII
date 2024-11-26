@@ -59,7 +59,14 @@
 Solução: Implementar uma lógica de loop que percorra os endereços por ponteiro até encontrar um endereço NULL.
 
 # 📋 Product Backlog
-![image](https://github.com/user-attachments/assets/db2d0e14-1bdb-4d0f-858c-19a52745b5b5)
+
+Prioridade | Título | Descrição | Detalhamento
+:----------: | :------: | :---------: | :------------:
+100 | Cadastro de Livro | Permitir o cadastro de um novo livro no sistema | O sistema solicita o ISBN, título, autor quantidade de páginas, país de origem e gênero. Após a verificação da unicidade do ISBN, os dados são salvos na lista dinâminca, árvore binária e lista duplamente ligada
+95 | Alteração de Dados de Livro | Permitir a alteração dos dados de um livro existente, exceto o ISBN | O sistema solicita ISBN para localizar o livro. Caso encontrado, o usuário pode atualizar os dados do livro, como título, autor, quantidade de páginas, país de origem e gênero. O ISBN não pode ser alterado
+90 | Exclusão de Livro | Permitir a exclusão de um livro pelo ISBN | O sistema solicita o ISBN para localizar o livro. Se o livreo for encontrado, ele será removido da lista dinâmica, árvore binária e lista duplamente ligada. Se o ISBN não for encontrado, uma mensagem de erro será exibida
+85 | Busca de Livro | Permitir a busca de livros pelo ISBN | O sistema solicita o ISBN para buscar o livro. Se o livro for encontrado, suas informações detalhadas serão exibidas. Se não encontrado, o sistema exibirá uma mensagem de erro
+80 | Geração de Relatório | Gerar relatório com a listagem de todos os livros, ordenados pelo nome | O sistema deve gerar um relatório completo dos livros registrados, ordenados por nome (ou outro critério). O relatório pode ser impresso ou exportado para um arquivo de texto.
 
 # 📊 Diagrama de Casos de Uso
 ![image](https://github.com/user-attachments/assets/9ef3624e-0c33-46e2-b118-fbbe1bdf5ade)
