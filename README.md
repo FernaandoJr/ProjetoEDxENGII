@@ -56,7 +56,8 @@
 ## Problema: 
 - Interar entre as posições de memória para armazenar ou encontrar dados previamente armazenados.
 
-Solução: Implementar uma lógica de loop que percorra os endereços por ponteiro até encontrar um endereço NULL.
+## Solução:
+- Implementar uma lógica de loop que percorra os endereços por ponteiro até encontrar um endereço NULL.
 
 # 📋 Product Backlog
 
