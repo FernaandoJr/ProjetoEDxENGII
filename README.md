@@ -75,19 +75,86 @@ Prioridade | Título | Descrição | Detalhamento
 # 🔄 Fluxo de Eventos
 
 ## 🔀 Fluxo Básico
-1.  O sistema abre o menu de opções.
-2.  O ator solicita o cadastro de um novo livro.
-3.  O sistema solicita os detalhes do livro (ISBN, nome, autor, etc.).
-4.  O ator insere os detalhes.
-5.  O sistema verifica se o ISBN já está cadastrado.
-6.  O sistema informa que o ISBN é único e cadastra o livro.
-7.  O ator recebe a confirmação de que o livro foi cadastrado com sucesso.
+### 1.	Caso de Uso: Cadastrar Livro
+* Ator: Bibliotecário
+1.	 O Bibliotecário solicita o cadastro de um novo livro.
+2.	 O Sistema solicita os detalhes do livro (ISBN, nome, autor etc.).
+3.	 O Bibliotecário insere os detalhes.
+4.	 O Sistema verifica se o ISBN já está cadastrado.
+5.	 O Sistema informa que o ISBN é único e cadastra o livro.
+6.	 O Bibliotecário recebe a confirmação de que o livro foi cadastrado com sucesso.
+
+### 2.	Caso de Uso: Alterar Cadastro de Livros
+* Ator: Bibliotecário
+1.	O Bibliotecário solicita a alteração dos dados de um livro específico.
+2.	O sistema solicita o ISBN do livro a ser alterado.
+3.	O Bibliotecário insere o ISBN.
+4.	O sistema verifica se o ISBN está registrado.
+5.	O sistema informa que o livro foi encontrado e exibe os dados atuais.
+6.	O Bibliotecário modifica os dados desejados (exceto o ISBN).
+7.	O sistema atualiza o cadastro com as novas informações.
+8.	O Bibliotecário recebe a confirmação de que as alterações foram realizadas com sucesso.
+
+### 3.	Caso de Uso: Excluir Livro
+* Ator: Bibliotecário
+1.	O Bibliotecário solicita a exclusão de um livro.
+2.	O sistema solicita o ISBN do livro a ser excluído.
+3.	O Bibliotecário insere o ISBN.
+4.	O sistema verifica se o livro está cadastrado.
+5.	O sistema informa que o livro foi encontrado.
+6.	O Bibliotecário confirma a exclusão do livro.
+7.	O sistema remove o livro do cadastro e atualiza as estruturas de indexação.
+8.	O Bibliotecário recebe a confirmação de que o livro foi excluído.
+				 
+### 4.	Caso de Uso: Buscar Livro
+* Ator: Bibliotecário
+1.	O Bibliotecário solicita a busca de um livro pelo ISBN.
+2.	O sistema solicita o ISBN do livro.
+3.	O Bibliotecário insere o ISBN.
+4.	O sistema verifica se o ISBN está cadastrado.
+5.	O sistema exibe os dados completos do livro, caso encontrado.
+6.	O Bibliotecário visualiza as informações do livro.
+
+### 5.	Caso de Uso: Gerar Relatório
+* Ator: Bibliotecário
+1.	O Bibliotecário solicita a geração de um relatório de todos os livros cadastrados.
+2.	O sistema processa os dados e organiza os livros de forma ordenada.
+3.	O sistema gera o relatório.
+4.	O Bibliotecário visualiza o relatório detalhado dos livros cadastrados.
+
+### 6.	Caso de Uso: Checar se já cadastrado (uso incluído em outros casos)
+* Ator: Bibliotecário
+1.	O sistema automaticamente verifica se o ISBN informado está cadastrado em operações de cadastro e alteração.
+2.	O Bibliotecário é informado caso o ISBN já esteja registrado, impedindo a duplicidade.
+3.	O Bibliotecário recebe a instrução de corrigir a entrada caso seja necessário.
 
 ## ⚠️ Fluxo Alternativo
-- 5.1.  O sistema informa que o ISBN já existe no cadastro.
-- 5.2.  O sistema aborta o cadastro e exibe mensagem de erro.
+### 1.1 Fluxo Alternativo: ISBN já cadastrado
+5. 1 - O Sistema informa que o ISBN já existe no cadastro.
+5. 2 - O Sistema aborta o cadastro e exibe mensagem de erro.
 
+### 2.1 Fluxo Alternativo: ISBN inexistente
+5. 1 - O sistema informa que o ISBN não está cadastrado.
+5. 2 - O Bibliotecário pode tentar novamente com outro ISBN ou cancelar a operação.
 
+### 3.1 Fluxo Alternativo: ISBN inexistente
+4. 1 - O sistema informa que o ISBN não está cadastrado.
+4. 2 - O Bibliotecário pode tentar novamente com outro ISBN ou cancelar a operação.
+
+### 4.1 Fluxo Alternativo: ISBN inexistente
+5. 1 - O sistema informa que o ISBN não está cadastrado.
+5. 2 - O Bibliotecário pode tentar novamente com outro ISBN ou encerrar a operação.
+
+### 5.1 Fluxo Alternativo: Nenhum livro cadastrado
+2. 1 - O sistema tenta acessar os dados de livros cadastrados.
+2. 2 - O sistema informa que não há livros cadastrados.
+2. 3 - O Bibliotecário encerra a operação ou aguarda novos cadastros.
+
+### 6.1 Fluxo Alternativo: Problema de verificação
+1. 1 - O sistema encontra um erro de validação ou conexão.
+1. 2 - O sistema informa que a verificação falhou temporariamente.
+2. 1 - O ator pode tentar novamente ou encerrar a operação.
+        
 # 🛠️ Diagrama de Atividades
 ![diagrama de atividade](https://github.com/user-attachments/assets/13aa120d-1dac-4d80-a3dc-d0dd09f7902f)
 
