@@ -67,20 +67,22 @@ Solução: Implementar uma lógica de loop que percorra os endereços por pontei
 # 🔄 Fluxo de Eventos
 
 ## 🔀 Fluxo Básico
-1. 🟢 O sistema abre o menu de opções.
-2. 🔍 O ator solicita o cadastro de um novo livro.
-3. 📚 O sistema solicita os detalhes do livro (ISBN, nome, autor, etc.).
-4. 👩‍💻 O ator insere os detalhes.
-5. 👀 O sistema verifica se o ISBN já está cadastrado.
-6. ✅ O sistema informa que o ISBN é único e cadastra o livro.
-7. ✅ O ator recebe a confirmação de que o livro foi cadastrado com sucesso.
+1.  O sistema abre o menu de opções.
+2.  O ator solicita o cadastro de um novo livro.
+3.  O sistema solicita os detalhes do livro (ISBN, nome, autor, etc.).
+4.  O ator insere os detalhes.
+5.  O sistema verifica se o ISBN já está cadastrado.
+6.  O sistema informa que o ISBN é único e cadastra o livro.
+7.  O ator recebe a confirmação de que o livro foi cadastrado com sucesso.
 
 ## ⚠️ Fluxo Alternativo
-
+- 5.1.  O sistema informa que o ISBN já existe no cadastro.
+- 5.2.  O sistema aborta o cadastro e exibe mensagem de erro.
 
 
 # 🛠️ Diagrama de Atividades
-![Imagem do WhatsApp de 2024-11-24 à(s) 13 49 11_8d218d12](https://github.com/user-attachments/assets/4da20be0-1033-4503-aeda-3b7a4dc1f136)
+![diagrama de atividade](https://github.com/user-attachments/assets/13aa120d-1dac-4d80-a3dc-d0dd09f7902f)
+
 
 # 📝 Guia do Usuário
 
