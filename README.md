@@ -63,11 +63,12 @@
 
 Prioridade | Título | Descrição | Detalhamento | Estimimativa | Critério de Aceite
 :----------: | :------: | :---------: | :------------: | :---------: | :---------:
-100 | Cadastro de Livro | Permitir o cadastro de um novo livro no sistema | O sistema solicita o ISBN, título, autor quantidade de páginas, país de origem e gênero. Após a verificação da unicidade do ISBN, os dados são salvos na lista dinâminca, árvore binária e lista duplamente ligada | 5 | O minimo que ele precisa ter para funcionar
-95 | Alteração de Dados de Livro | Permitir a alteração dos dados de um livro existente, exceto o ISBN | O sistema solicita ISBN para localizar o livro. Caso encontrado, o usuário pode atualizar os dados do livro, como título, autor, quantidade de páginas, país de origem e gênero. O ISBN não pode ser alterado | 8 |
-90 | Exclusão de Livro | Permitir a exclusão de um livro pelo ISBN | O sistema solicita o ISBN para localizar o livro. Se o livreo for encontrado, ele será removido da lista dinâmica, árvore binária e lista duplamente ligada. Se o ISBN não for encontrado, uma mensagem de erro será exibida | 5 |
-85 | Busca de Livro | Permitir a busca de livros pelo ISBN | O sistema solicita o ISBN para buscar o livro. Se o livro for encontrado, suas informações detalhadas serão exibidas. Se não encontrado, o sistema exibirá uma mensagem de erro | 13 | 
-80 | Geração de Relatório | Gerar relatório com a listagem de todos os livros, ordenados pelo nome | O sistema deve gerar um relatório completo dos livros registrados, ordenados por nome (ou outro critério). O relatório pode ser impresso ou exportado para um arquivo de texto | 13 |
+100 | Cadastro de Livro | Permitir o cadastro de um novo livro no sistema | O sistema solicita o ISBN, título, autor quantidade de páginas, país de origem e gênero. Após a verificação da unicidade do ISBN, os dados são salvos na lista dinâminca, árvore binária e lista duplamente ligada | 5 | 1- Todos os campos obrigatórios devem ser preenchidos. 2- O ISBN deve ser único e validado antes do cadastro. 3- Os dados devem ser salvos nas estruturas (lista dinâmica, árvore binária e lista duplamente ligada). 4- Exibir mensagem de sucesso ou erro apropriada após o processo.
+95 | Alteração de Dados de Livro | Permitir a alteração dos dados de um livro existente, exceto o ISBN | O sistema solicita ISBN para localizar o livro. Caso encontrado, o usuário pode atualizar os dados do livro, como título, autor, quantidade de páginas, país de origem e gênero. O ISBN não pode ser alterado | 8 | 1- O sistema deve permitir a busca do livro pelo ISBN.
+2- Apenas livros existentes podem ser alterados. 3- O sistema deve permitir a modificação de qualquer campo, exceto o ISBN. 4- As alterações devem ser refletidas em todas as estruturas de dados. 5- Exibir mensagem de confirmação após a alteração ou mensagem de erro em caso de falha.
+90 | Exclusão de Livro | Permitir a exclusão de um livro pelo ISBN | O sistema solicita o ISBN para localizar o livro. Se o livreo for encontrado, ele será removido da lista dinâmica, árvore binária e lista duplamente ligada. Se o ISBN não for encontrado, uma mensagem de erro será exibida | 5 | 1- O sistema deve permitir a busca do livro pelo ISBN antes da exclusão. 2- Apenas livros existentes podem ser excluídos. 3- A exclusão deve remover o livro de todas as estruturas de dados (lista dinâmica, árvore binária e lista duplamente ligada). 4- Exibir mensagem de confirmação após a exclusão ou de erro caso o livro não seja encontrado.
+85 | Busca de Livro | Permitir a busca de livros pelo ISBN | O sistema solicita o ISBN para buscar o livro. Se o livro for encontrado, suas informações detalhadas serão exibidas. Se não encontrado, o sistema exibirá uma mensagem de erro | 13 | 1- O sistema deve permitir a busca de um livro pelo ISBN, título ou autor. 2- O resultado deve exibir todos os dados do livro encontrado. 3- Caso nenhum livro seja encontrado, o sistema deve exibir uma mensagem informando que não há resultados para a busca. 4- A busca deve ser eficiente, consultando as estruturas de dados apropriadas (lista dinâmica, árvore binária ou lista duplamente ligada).
+80 | Geração de Relatório | Gerar relatório com a listagem de todos os livros, ordenados pelo nome | O sistema deve gerar um relatório completo dos livros registrados, ordenados por nome (ou outro critério). O relatório pode ser impresso ou exportado para um arquivo de texto | 13 | 1- O sistema deve permitir a geração de relatórios com todos os livros cadastrados, exibindo ISBN, título, autor, quantidade de páginas, país de origem e gênero. 2- O relatório deve ser organizado e paginado, se necessário. 3- Em caso de ausência de dados para o relatório, o sistema deve exibir uma mensagem informativa.
 
 # 📊 Diagrama de Casos de Uso
 ![image](https://github.com/user-attachments/assets/9ef3624e-0c33-46e2-b118-fbbe1bdf5ade)
@@ -157,6 +158,9 @@ Prioridade | Título | Descrição | Detalhamento | Estimimativa | Critério de 
         
 # 🛠️ Diagrama de Atividades
 ![diagrama de atividade](https://github.com/user-attachments/assets/13aa120d-1dac-4d80-a3dc-d0dd09f7902f)
+
+# Modelagem de Classe
+![class3 drawio](https://github.com/user-attachments/assets/f7f192b4-5c67-4868-8f14-88fb42e4f61f)
 
 
 # 📝 Guia do Usuário
