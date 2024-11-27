@@ -72,7 +72,7 @@ Prioridade | Título | Descrição | Detalhamento | Estimimativa | Critério de 
 # 📊 Diagrama de Casos de Uso
 ![image](https://github.com/user-attachments/assets/9ef3624e-0c33-46e2-b118-fbbe1bdf5ade)
 
-# 🔄 Fluxo de Eventos
+# 📊 Descrição do Diagrama de Casos de Uso
 
 ## 🔀 Fluxo Básico
 ### 1.	Caso de Uso: Cadastrar Livro
@@ -154,7 +154,15 @@ Prioridade | Título | Descrição | Detalhamento | Estimimativa | Critério de 
 1. 1 - O sistema encontra um erro de validação ou conexão.
 1. 2 - O sistema informa que a verificação falhou temporariamente.
 2. 1 - O ator pode tentar novamente ou encerrar a operação.
-        
+
+# 🔄 Fluxo de Eventos
+
+## 🔀 Fluxo Básico
+
+
+## ⚠️ Fluxo Alternativo
+
+
 # 🛠️ Diagrama de Atividades
 ![diagrama de atividade](https://github.com/user-attachments/assets/13aa120d-1dac-4d80-a3dc-d0dd09f7902f)
 
