@@ -29,11 +29,11 @@ enum
     INSTRUÇÕES PARA COMPILAR E EXECUTAR O PROJETO:
 
     Para compilar o projeto, utilize o seguinte comando no terminal:
-    gcc -o main main.c ./lib/ListaDinamica.c ./lib/Extra.c ./lib/ListaDuplamenteLigada.c ./lib/ArvoreBinaria.c
+    gcc -o FLIT main.c ./lib/ListaDinamica.c ./lib/Extra.c ./lib/ListaDuplamenteLigada.c ./lib/ArvoreBinaria.c
 
     Para executar o projeto, utilize o comando:
-    ./main (no Linux/Unix)
-    main (no Windows)
+    ./FLIT (no Linux/Unix)
+    FLIT (no Windows)
 */
 int main()
 {
