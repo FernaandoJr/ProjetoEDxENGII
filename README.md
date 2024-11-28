@@ -39,6 +39,31 @@
 * [Conclusão](#conclusão)
 * [Agradecimentos](#agradecimentos)
 
+* # 🚀 Como Executar o Código
+
+## Pré-requisitos
+Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
+- [GCC](https://gcc.gnu.org/) ou outro compilador C
+- [CLion](https://www.jetbrains.com/clion/) (opcional, mas recomendado para um ambiente de desenvolvimento integrado)
+
+## Passos para Compilar e Executar
+1. Clone o repositório:
+    ```sh
+    git clone https://github.com/FernaandoJr/projeto-flit.git
+    cd projeto-flit
+    ```
+
+2. Compile o código:
+    ```sh
+    gcc -o flit src/main.c -Iinclude
+    ```
+
+3. Execute o programa:
+    ```sh
+    ./flit
+    ```
+Pronto! Agora você deve conseguir compilar e executar o código do FLIT.
+
 # 🌟 Visão do Produto
 - **Propósito:** FLIT é projetado para resolver a necessidade de organização e gerenciamento de acervos literários em bibliotecas de pequeno e médio porte, facilitando o cadastro, busca e listagem de livros.
 - **Público-Alvo:** Bibliotecas públicas e privadas, escolas e universidades que precisam de uma solução leve e eficiente para gerenciar seus livros.
