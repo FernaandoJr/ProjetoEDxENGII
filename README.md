@@ -212,11 +212,72 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 1. 2 - O sistema informa que a verificação falhou temporariamente.
 1. 1 - O ator pode tentar novamente ou encerrar a operação.
 
-# 🔄 Fluxo de Eventos
+# 🔄 Fluxo de Eventos  
 
-## 🔀 Fluxo Básico
+## 🔀 Fluxo Básico  
+1. 🖥️ **O Sistema inicia** e mostra o Menu de Opções.  
+2. 📚 **O Bibliotecário seleciona** o cadastro de um novo livro.  
+3. 📝 **O Sistema solicita** os detalhes do livro (ISBN, nome, autor, etc.).  
+4. 🖊️ **O Bibliotecário insere** os detalhes.  
+5. 🔍 **O Sistema verifica** se o ISBN já está cadastrado.  
+6. ✅ **O Sistema informa** que o ISBN é único e cadastra o livro.  
+7. 🎉 **O Bibliotecário recebe** a confirmação de que o livro foi cadastrado com sucesso.  
+8. 🔄 **O Sistema retorna** para o Menu de Opções.  
+9. 🛠️ **O Bibliotecário seleciona** a alteração dos dados de um livro específico.  
+10. 🏷️ **O Sistema solicita** o ISBN do livro a ser alterado.  
+11. 🖊️ **O Bibliotecário insere** o ISBN.  
+12. 🔍 **O Sistema verifica** se o ISBN está registrado.  
+13. 📑 **O Sistema informa** que o livro foi encontrado e exibe os dados atuais.  
+14. 🖊️ **O Bibliotecário modifica** os dados desejados (exceto o ISBN).  
+15. 🖥️ **O Sistema atualiza** o cadastro com as novas informações.  
+16. 🎉 **O Bibliotecário recebe** a confirmação de que as alterações foram realizadas com sucesso.  
+17. 🔄 **O Sistema retorna** para o Menu de Opções.  
+18. 🗑️ **O Bibliotecário seleciona** a exclusão de um livro.  
+19. 🏷️ **O Sistema solicita** o ISBN do livro a ser excluído.  
+20. 🖊️ **O Bibliotecário insere** o ISBN.  
+21. 🔍 **O Sistema verifica** se o livro está cadastrado.  
+22. ✅ **O Sistema informa** que o livro foi encontrado.  
+23. 🗑️ **O Bibliotecário confirma** a exclusão do livro.  
+24. ❌ **O Sistema remove** o livro do cadastro e atualiza as estruturas de indexação.  
+25. 🎉 **O Bibliotecário recebe** a confirmação de que o livro foi excluído.  
+26. 🔄 **O Sistema retorna** para o Menu de Opções.  
+27. 🔍 **O Bibliotecário solicita** a busca de um livro pelo ISBN.  
+28. 🏷️ **O Sistema solicita** o ISBN do livro.  
+29. 🖊️ **O Bibliotecário insere** o ISBN.  
+30. 🔍 **O Sistema verifica** se o ISBN está cadastrado.  
+31. 📑 **O Sistema exibe** os dados completos do livro, caso encontrado.  
+32. 👓 **O Bibliotecário visualiza** as informações do livro.  
+33. 🔄 **O Sistema retorna** para o Menu de Opções.  
+34. 📄 **O Bibliotecário seleciona** a geração de um relatório de todos os livros cadastrados.  
+35. 🖥️ **O Sistema processa** os dados e organiza os livros de forma ordenada.  
+36. 📄 **O Sistema gera** o relatório.  
+37. 👓 **O Bibliotecário visualiza** o relatório detalhado dos livros cadastrados.  
 
-## ⚠️ Fluxo Alternativo
+---
+
+## ⚠️ Fluxo Alternativo  
+
+### Durante o Cadastro de Livro  
+5.1 🚨 **O Sistema informa** que o ISBN já existe no cadastro.  
+5.2 ❌ **O Sistema aborta** o cadastro e exibe mensagem de erro.  
+
+### Durante a Alteração de Livro  
+12.1 🚨 **O Sistema informa** que o ISBN não está cadastrado.  
+12.2 🔄 **O Bibliotecário pode tentar** novamente com outro ISBN ou cancelar a operação.  
+
+### Durante a Exclusão de Livro  
+21.1 🚨 **O Sistema informa** que o ISBN não está cadastrado.  
+21.2 🔄 **O Bibliotecário pode tentar** novamente com outro ISBN ou cancelar a operação.  
+
+### Durante a Busca de Livro  
+30.1 🚨 **O Sistema informa** que o ISBN não está cadastrado.  
+30.2 🔄 **O Bibliotecário pode tentar** novamente com outro ISBN ou encerrar a operação.  
+
+### Durante a Geração de Relatório  
+34.1 📄 **O Sistema tenta acessar** os dados de livros cadastrados.  
+34.2 🚨 **O Sistema informa** que não há livros cadastrados.  
+34.3 🔄 **O Bibliotecário encerra** a operação ou aguarda novos cadastros.  
+
 
 # 🛠️ Diagrama de Atividades
 
@@ -226,7 +287,70 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 
 ![class3 drawio](https://github.com/user-attachments/assets/f7f192b4-5c67-4868-8f14-88fb42e4f61f)
 
-# 📝 Guia do Usuário
+# 📝 Guia do Usuário  
+
+O **FLIT** foi projetado para ser simples e direto. Ao executar o programa, você terá acesso ao menu principal com as opções:  
+
+**Adicionar**, **Alterar**, **Excluir**, **Buscar**, **Gerar Relatório** e **Sair**.  
+
+Cada funcionalidade está detalhada a seguir:  
+
+---
+
+### 🟢 **Adicionar**  
+![ADICIONAR](https://github.com/user-attachments/assets/1101fce8-77e3-4c6d-a765-4e495292141e)  
+1. Selecione **"Adicionar"** no menu.  
+2. Preencha os campos obrigatórios: **ISBN**, **Título**, **Autor**, **Ano**, **Editora** e **Gênero**.  
+   - O **ISBN** deve ser único; duplicatas geram uma mensagem de erro:  
+     ![ADICIONAR_ERRO](https://github.com/user-attachments/assets/d3357853-0125-4282-a079-1dfdfe39f273).  
+3. Após o preenchimento, o sistema confirma o cadastro com uma mensagem de sucesso:  
+   ![ADICIONAR_SUCESSO](https://github.com/user-attachments/assets/cbab849e-c89c-459b-88e1-ce54a723445e).  
+
+---
+
+### 🟡 **Alterar**  
+![ALTERAR_SUCESSO](https://github.com/user-attachments/assets/b8d29ade-017e-4b53-ab55-3d3cb00f54ea)  
+1. Selecione **"Alterar"** no menu.  
+2. Digite o **ISBN** do livro que deseja modificar.  
+   - Se o ISBN não existir, será exibida uma mensagem de erro.  
+3. Caso o ISBN seja encontrado, os dados atuais serão exibidos para edição.  
+4. Após confirmar as alterações, o sistema salva os novos dados e exibe uma mensagem de sucesso.  
+
+---
+
+### 🔴 **Excluir**  
+![EXCLUIR_SUCESSO](https://github.com/user-attachments/assets/7bf64ddd-7239-4e3c-94e9-7e9c71ccb331)  
+1. Selecione **"Excluir"** no menu.  
+2. Digite o **ISBN** do livro que deseja remover.  
+   - Se o ISBN não existir, será exibida uma mensagem de erro:  
+     ![EXCLUIR_ERRO](https://github.com/user-attachments/assets/9c8f04b0-7cca-418b-a419-907eb5ec7b63).  
+3. Caso o ISBN seja encontrado, o sistema confirma a exclusão e exibe uma mensagem de sucesso.  
+
+---
+
+### 🔍 **Buscar**  
+![BUSCAR_SUCESSO](https://github.com/user-attachments/assets/657cb707-fe60-4254-aa16-70efc5d92686)  
+1. Selecione **"Buscar"** no menu.  
+2. Digite o **ISBN** do livro que deseja localizar.  
+   - Se o ISBN não existir, será exibida uma mensagem de erro:  
+     ![BUSCAR_ERRO](https://github.com/user-attachments/assets/64625a64-6b39-4f7f-81da-659f1b36f6a6).  
+3. Caso o ISBN seja encontrado, as informações completas do livro serão exibidas.  
+
+---
+
+### 📄 **Gerar Relatório**  
+![RELATORIO](https://github.com/user-attachments/assets/5ff9d259-282a-41f5-9f6a-a98d3bbdd0c5)  
+1. Selecione **"Gerar Relatório"** no menu.  
+2. O sistema exibirá uma listagem ordenada alfabeticamente pelos títulos dos livros cadastrados.  
+   - Se não houver livros cadastrados, será exibida uma mensagem indicando o fim do relatório.  
+
+---
+
+### 🚪 **Sair**  
+![SAIR](https://github.com/user-attachments/assets/d83bda03-1453-4116-bbdf-ccc43efa6fe4)  
+1. Selecione **"Sair"** no menu.  
+2. O sistema encerrará a execução, retornando ao ambiente de linha de comando.
+
 
 # ✅ Conclusão
 
