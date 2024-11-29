@@ -96,7 +96,7 @@ void adicionar_livro()
     // Busca o ISBN na árvore para verificar se já existe.
     if (buscarArvore(raizArvore, ISBN, &registro))
     {
-        mensagemErro("ISBN já cadastrado.");
+        mensagemErro("ISBN ja cadastrado.");
         return;
     }
     printf(BLUE "Digite o autor do livro: " RESET);
@@ -144,7 +144,6 @@ void excluir_livro(const char *ISBN)
     // Verifica se o livro existe na árvore binária antes de tentar excluí-lo.
     if (!buscarArvore(raizArvore, ISBN, &registro))
     {
-        system("cls");
         mensagemErro("Livro nao encontrado.");
         return;
     }
@@ -160,7 +159,6 @@ void excluir_livro(const char *ISBN)
 
     if (atual == NULL)
     {
-        system("cls");
         mensagemErro("Livro nao encontrado.");
         return;
     }
@@ -179,8 +177,7 @@ void excluir_livro(const char *ISBN)
     excluirArvore(&raizArvore, ISBN);
 
     free(atual);
-    system("cls");
-    mensagemSucesso("Livro excluído com sucesso!");
+    mensagemSucesso("Livro excluido com sucesso!");
 }
 
 /**
