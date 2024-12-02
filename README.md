@@ -281,7 +281,7 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 
 # 🛠️ Diagrama de Atividades
 
-![diagrama de atividade](https://github.com/user-attachments/assets/13aa120d-1dac-4d80-a3dc-d0dd09f7902f)
+![diagrama de atividade](https://github.com/user-attachments/assets/6ce5282a-e062-492c-8d3d-33318524f6bd)
 
 # Modelagem de Classe
 
