@@ -55,4 +55,6 @@ void imprimirIndice();
  */
 void liberarIndice();
 
+void removerNoIndice(int registro);
+
 #endif // LISTADUPLAMENTELIGADA_H

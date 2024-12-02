@@ -153,3 +153,26 @@ void liberarIndice()
     }
     inicioIndice = NULL;
 }
+
+//Funçao chamada na exclusão dos dados dentro da arvore binaria para remover o cadastro
+void removerNoIndice(int registro) {
+    IndiceOrdenacao *atual = inicioIndice;
+    IndiceOrdenacao *anterior = NULL;
+
+    while (atual != NULL && atual->registro != registro) {
+        anterior = atual;
+        atual = atual->proximo;
+    }
+
+    if (atual != NULL) { // Nó encontrado
+        if (anterior == NULL) {
+            inicioIndice = atual->proximo;
+        } else {
+            anterior->proximo = atual->proximo;
+        }
+        if (atual->proximo != NULL) {
+            atual->proximo->anterior = anterior;
+        }
+        free(atual);
+    }
+}

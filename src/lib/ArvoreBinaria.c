@@ -1,4 +1,5 @@
 #include "ArvoreBinaria.h"
+#include "ListaDuplamenteLigada.h"
 #include "Extra.h"
 #include <stdlib.h>
 #include <string.h>
@@ -162,6 +163,7 @@ void excluirArvore(PK **raiz, const char *ISBN)
             free(sucessor);
         }
         free(noParaRemover);
+        removerNoIndice(noParaRemover->registro);
     }
 }
 
